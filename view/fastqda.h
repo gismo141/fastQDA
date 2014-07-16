@@ -1,5 +1,5 @@
-#ifndef EASYCODING_H
-#define EASYCODING_H
+#ifndef FASTQDA_H
+#define FASTQDA_H
 
 #include <QMainWindow>
 
@@ -16,7 +16,7 @@ class QString;
  * @brief This class represents the main-window and its menubar.
  * @details Every action triggered via the menubar is processed here. Also it is responsible for all the systemcalls like quit.
  */
-class easyCoding : public QMainWindow {
+class fastQDA : public QMainWindow {
     Q_OBJECT
 private:
     /**
@@ -31,11 +31,11 @@ public:
     /**
      * @brief std. ctor
      */
-    easyCoding();
+    fastQDA();
     /**
      * @brief std. dtor
      */
-    ~easyCoding() {}
+    ~fastQDA() {}
 
 public slots:
     /**
@@ -65,9 +65,9 @@ public slots:
      */
     void messageBox(void) {
         QMessageBox* myDialog = new QMessageBox(QMessageBox::Information,
-        "easyCoding", "easyCoding\n a fast and simple alternative to MaxQDA", QMessageBox::Ok);
+        "fastQDA", "fastQDA\n a fast and simple alternative to MaxQDA", QMessageBox::Ok);
         myDialog->exec();
     }
 };
 
-#endif // EASYCODING_H
+#endif // FASTQDA_H

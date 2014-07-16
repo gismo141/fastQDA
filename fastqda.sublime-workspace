@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"def",
+				"definition"
+			],
+			[
+				"retur",
+				"return"
+			],
+			[
+				"addC",
+				"addNewCode"
+			],
+			[
+				"code",
+				"codeList"
+			],
+			[
+				"if",
+				"if_	if(…)"
+			],
+			[
+				"new",
+				"newCodeInList"
+			],
+			[
+				"m_",
+				"m_name"
+			],
+			[
+				"codeSe",
+				"codeSettings"
+			],
+			[
+				"codeSet",
+				"codeSetup"
+			],
+			[
+				"cod",
+				"code"
+			],
+			[
+				"abort",
+				"abortSetup"
+			],
+			[
+				"clas",
+				"class_	class"
+			],
+			[
+				"cla",
+				"class_	class"
+			],
+			[
+				"cl",
+				"class_	class"
+			],
+			[
+				"acti",
+				"activeDocument"
+			],
+			[
+				"add",
+				"addWidget"
+			],
+			[
+				"main",
+				"mainWidget"
+			],
+			[
+				"set",
+				"setCode"
+			],
+			[
+				"cods",
+				"codeSettings"
+			],
+			[
+				"size",
+				"sizeOfWidget"
+			],
+			[
 				"a",
 				"activeDocumentLabel"
 			],
@@ -136,16 +216,25 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/michaelriedel/Developer/easyCoding",
-		"/Users/michaelriedel/Developer/easyCoding/view"
+		"/Users/michaelriedel/Developer/fastQDA"
 	],
 	"file_history":
 	[
+		"/Users/michaelriedel/Documents/test/blubb/mainWindow.h",
+		"/Users/michaelriedel/Documents/test/blubb/blubb.cpp",
+		"/Users/michaelriedel/Developer/easyCoding/model/codeManager.h",
+		"/Users/michaelriedel/Developer/easyCoding/model/codeManager.cpp",
+		"/Users/michaelriedel/Developer/easyCoding/view/codeManager.h",
+		"/Users/michaelriedel/Developer/easyCoding/view/code.cpp",
+		"/Users/michaelriedel/Developer/easyCoding/view/code.h",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/cupp.sublime-package/qt.sublime-snippet",
+		"/Users/michaelriedel/Downloads/test.pdf",
+		"/Users/michaelriedel/Developer/easyCoding/view/easycoding.cpp",
+		"/Users/michaelriedel/Developer/easyCoding/view/easycoding.h",
 		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/cupp.sublime-package/qt.sublime-build",
 		"/Users/michaelriedel/Developer/easyQDA/easyQDA.app/Contents/MacOS/easyQDA",
 		"/Users/michaelriedel/Developer/codetagger/picview.h",
 		"/Users/michaelriedel/Developer/codetagger/codetagger.pro",
-		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/cupp.sublime-package/qt.sublime-snippet",
 		"/Users/michaelriedel/Dropbox/Studium/Wahlpflichtmodule/MOP2/Uebungen/Uebung7/picviewer/picviewer/picview.h",
 		"/Users/michaelriedel/Dropbox/Studium/Wahlpflichtmodule/MOP2/Uebungen/Uebung7/picviewer/picviewer/main.cpp",
 		"/Users/michaelriedel/Dropbox/Studium/Wahlpflichtmodule/MOP2/Uebungen/Uebung7/picviewer/picviewer/picview.cpp",
@@ -215,6 +304,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"treeWidget",
+			"TreeWidget",
+			"treeWidget",
+			"addNewCode",
+			"RowHeight",
+			"setText",
+			"abortCode",
+			"mainLayout",
+			"QSpinBox",
+			"array",
+			"setColor",
+			"tag",
+			"format",
+			"codingArea",
+			"coding-Area",
+			"textArea",
 			"l_codingWindow",
 			"picMessageBox",
 			"PicView",
@@ -302,7 +407,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 231.0
+		"height": 320.0
 	},
 	"output.find_results":
 	{
@@ -312,7 +417,7 @@
 	{
 		"height": 150.0
 	},
-	"project": "easycoding.sublime-project",
+	"project": "fastqda.sublime-project",
 	"replace":
 	{
 		"height": 58.0

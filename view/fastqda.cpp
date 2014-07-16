@@ -8,9 +8,9 @@
 #include <QDesktopWidget>
 #include <QRect>
 
-#include "easycoding.h"
+#include "fastQDA.h"
 
-easyCoding::easyCoding() : QMainWindow(NULL) {
+fastQDA::fastQDA() : QMainWindow(NULL) {
     createMenuBar();
     QDesktopWidget dw;
     QRect screenGeometry = dw.availableGeometry(-1);
@@ -18,7 +18,7 @@ easyCoding::easyCoding() : QMainWindow(NULL) {
     myMainWidget = new mainWidget(this, &dw);
 };
 
-void easyCoding::createMenuBar(void) {
+void fastQDA::createMenuBar(void) {
     /* Install File Dialog */
     myFileDialog = new QFileDialog(this);
     myFileDialog->setNameFilter("Documents (*.pdf *.txt *html)");
@@ -49,6 +49,6 @@ void easyCoding::createMenuBar(void) {
                         SLOT(importFile(const QString&)));
 }
 
-void easyCoding::importFile(const QString& name) {
+void fastQDA::importFile(const QString& name) {
     myMainWidget->updateActiveDocument(name);
 }
