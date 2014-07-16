@@ -1,0 +1,357 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"a",
+				"activeDocumentLabel"
+			],
+			[
+				"ac",
+				"activeDocument"
+			],
+			[
+				"Crea",
+				"CreateWindowLayout"
+			],
+			[
+				"eas",
+				"easyQDA"
+			],
+			[
+				"Y",
+				"YELLOW"
+			],
+			[
+				"g",
+				"gz"
+			],
+			[
+				"pi",
+				"picosafe_rootfs"
+			],
+			[
+				"titl",
+				"title{text}	latex-document"
+			],
+			[
+				"doc",
+				"documentclass{article}	New Article"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/cupp.sublime-package/qt.sublime-build",
+	"command_palette":
+	{
+		"height": 313.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"mak",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"makr",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"Latex",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"col",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 195.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/michaelriedel/Developer/easyCoding",
+		"/Users/michaelriedel/Developer/easyCoding/view"
+	],
+	"file_history":
+	[
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/cupp.sublime-package/qt.sublime-build",
+		"/Users/michaelriedel/Developer/easyQDA/easyQDA.app/Contents/MacOS/easyQDA",
+		"/Users/michaelriedel/Developer/codetagger/picview.h",
+		"/Users/michaelriedel/Developer/codetagger/codetagger.pro",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/cupp.sublime-package/qt.sublime-snippet",
+		"/Users/michaelriedel/Dropbox/Studium/Wahlpflichtmodule/MOP2/Uebungen/Uebung7/picviewer/picviewer/picview.h",
+		"/Users/michaelriedel/Dropbox/Studium/Wahlpflichtmodule/MOP2/Uebungen/Uebung7/picviewer/picviewer/main.cpp",
+		"/Users/michaelriedel/Dropbox/Studium/Wahlpflichtmodule/MOP2/Uebungen/Uebung7/picviewer/picviewer/picview.cpp",
+		"/Users/michaelriedel/Downloads/output.txt",
+		"/Users/michaelriedel/Downloads/xpdf-3.03/README",
+		"/Users/michaelriedel/Downloads/xpdf-3.03/INSTALL",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Bachelorarbeit/output.txt",
+		"/Users/michaelriedel/Downloads/xpdf-3.03/misc/output.txt",
+		"/Users/michaelriedel/Downloads/podofo-0.9.3/tools/podofotxtextract/TextExtractor.cpp",
+		"/Users/michaelriedel/Downloads/podofo-0.9.3/tools/podofotxtextract/podofotxtextract.cpp",
+		"/Users/michaelriedel/Downloads/podofo-0.9.3/tools/podofotxtextract/TextExtractor.h",
+		"/Users/michaelriedel/Downloads/podofo-0.9.3/CMakeFiles/CMakeError.log",
+		"/Users/michaelriedel/Downloads/podofo-0.9.3/tools/podofotxtextract/CMakeLists.txt",
+		"/Users/michaelriedel/test.tex",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Bachelorarbeit/Code/distantusb/src/sshfs_start.sh",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Bachelorarbeit/Code/distantusb/src/copy_keys.sh",
+		"/Users/michaelriedel/.bashrc",
+		"/Users/michaelriedel/Developer/params/params.sh",
+		"/Users/michaelriedel/Developer/raspberrypi-motd/motd.sh",
+		"/Users/michaelriedel/Developer/picosafe/rootfs/fillsdcard.sh",
+		"/Users/michaelriedel/Developer/picosafe/README.md",
+		"/Users/michaelriedel/Developer/picosafe/rootfs/README.md",
+		"/Users/michaelriedel/Developer/picosafe/rootfs/.gitignore",
+		"/Users/michaelriedel/Developer/picosafe/rootfs/genrootfs.sh",
+		"/Users/michaelriedel/Developer/picosafe/rootfs/gensdcard.sh",
+		"/Users/michaelriedel/.gitconfig",
+		"/Users/michaelriedel/Developer/picosafe/.gitignore",
+		"/Users/michaelriedel/Developer/picosafe/kernel/.gitignore",
+		"/Users/michaelriedel/Developer/picosafe/ToDO",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Bachelorarbeit/Code/Anpassungen/genrootfs.sh",
+		"/Volumes/TimeMachine/lpc3131/README.md",
+		"/Volumes/TimeMachine/lpc3131/rootfs/debian/debian_install/general_settings.sh",
+		"/Users/michaelriedel/Downloads/gnublin-distribution-master/lpc3131/rootfs/debian/debian_install/build_debian_system.sh",
+		"/Users/michaelriedel/Downloads/gnublin-distribution-master/lpc3131/rootfs/debian/debian_install/build_functions.sh",
+		"/Users/michaelriedel/Downloads/gnublin-distribution-master/lpc3131/tools/gnublin-installer/gnublin-installer-alt",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Studienarbeit/Studienarbeit.tex",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/private/etc/apache2/extra/httpd-vhosts.conf",
+		"/private/etc/apache2/httpd.conf",
+		"/private/etc/hosts",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/michaelriedel/README.md",
+		"/Users/michaelriedel/Documents/test.md",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Studienarbeit/Setup/usepackage.tex",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Studienarbeit/usepackage.tex",
+		"/Users/michaelriedel/Dropbox/Apps/Texpad/Praktikumsbericht DLR/Anhang/uml_diagramme.mp",
+		"/Users/michaelriedel/Developer/www/local.distantusb.de/index.php",
+		"/Users/michaelriedel/Developer/www/local.roswithasschneiderstube.de/index.php",
+		"/Users/michaelriedel/local.roswithasschneiderstube.de/index.php"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 107.0,
+		"where_history":
+		[
+			"messageBox",
+			"easyQDA"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"l_codingWindow",
+			"picMessageBox",
+			"PicView",
+			"myDialog",
+			"myAnsichtMenu",
+			"myDateiMenu",
+			"$i",
+			"i",
+			"Color",
+			"color",
+			"Color",
+			"color",
+			"Color",
+			"color",
+			"Color",
+			"color",
+			"ROOTFS",
+			"KERNELSRC",
+			"KEYFILE",
+			"keyfile",
+			"KEYFILE",
+			"PASSWORD",
+			"picosafe",
+			"Picosafe",
+			"picosafe",
+			"fold",
+			"Subtitle",
+			"Title",
+			"title",
+			"Title",
+			"roswithasschneiderstube"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 231.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 150.0
+	},
+	"project": "easycoding.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 270.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
