@@ -1,0 +1,3 @@
+# Ignore intermediate files
+moc_*
+*.o
