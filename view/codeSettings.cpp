@@ -2,9 +2,9 @@
 #include <QVBoxLayout>
 #include <QColorDialog>
 #include <QFontMetrics>
-#include <QTreeWidgetItem>
 
 #include "codeSettings.h"
+#include "codeList.h"
 
 codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
 	thisParent = parent;
@@ -89,13 +89,13 @@ void codeSettings::setHeight(QPlainTextEdit* edit, int nRows) {
 void codeSettings::updateCodeList(void) {
     m_headcode->clear();
     m_headcode->addItem("No Headcode", "No Headcode");
-    std::vector<QString> codelist = ((mainWidget *) thisParent)->getCodeList();
+    std::vector<QString> codelist = ((codeList *) thisParent)->getCodeList();
     for (auto &code : codelist)
         m_headcode->addItem(code, code);
 }
 
 void codeSettings::changeParameters(QTreeWidgetItem* oldCodeItem, int column) {
-    code *newCode = ((mainWidget *) thisParent)->getCode(oldCodeItem);
+    code *newCode = ((codeList *) thisParent)->getCode(oldCodeItem);
 
     m_name->setPlainText(newCode->getName());
     m_definition->setPlainText(newCode->getDefinition());
@@ -128,7 +128,7 @@ void codeSettings::setCodeColor(void) {
 }
 
 void codeSettings::saveCode(void) {
-	((mainWidget *) thisParent)->addCode(m_name->toPlainText()
+	((codeList *) thisParent)->addCode(m_name->toPlainText()
 											, m_definition->toPlainText()
 											, m_anker->toPlainText()
 											, m_color
@@ -137,6 +137,6 @@ void codeSettings::saveCode(void) {
 }
 
 void codeSettings::removeCode(void) {
-    ((mainWidget *) thisParent)->removeCode(m_name->toPlainText());
+    ((codeList *) thisParent)->removeCode(m_name->toPlainText());
     close();
 }

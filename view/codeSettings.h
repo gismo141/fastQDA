@@ -8,8 +8,7 @@
 #include <QComboBox>
 #include <QPushButton>
 #include <QColor>
-
-#include "mainWidget.h"
+#include <QTreeWidgetItem>
 
 class codeSettings : public QDialog {
     Q_OBJECT

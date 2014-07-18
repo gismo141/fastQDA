@@ -2,15 +2,18 @@
 #define FASTQDA_H
 
 #include <QMainWindow>
+#include <QDockWidget>
 
+#include <QMenuBar>
+#include <QMenu>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QString>
+#include <QTreeWidgetItem>
 
+#include "documentList.h"
 #include "mainWidget.h"
-
-class QFileDialog;
-class QString;
+#include "codeList.h"
 
 /**
  * @brief This class represents the main-window and its menubar.
@@ -23,19 +26,30 @@ private:
      * @brief This function creates the menubar and its entries.
      * @details All global functions of the program should be accessable from here. 
      */
-    void createMenuBar(void);
+    QMenu                   *setupFileMenu(void);
+    QMenu                   *setupEditMenu(void);
+    QMenu                   *setupViewMenu(void);
+    QMenu                   *setupHelpMenu(void);
+
+    void                    setupDocumentBrowser(void);
+    void                    setupMainWidget(void);
+    void                    setupCodeBrowser(void);
 protected:
-    QFileDialog *myFileDialog;
-    mainWidget *myMainWidget;
+    QMenuBar                *myMenu;
+    QFileDialog             *myFileDialog;
+    QFileDialog             *myProjectDialog;
+    mainWidget              *myMainWidget;
+    QDockWidget             *documentBrowser;
+    QDockWidget             *codeBrowser;
 public:
     /**
      * @brief std. ctor
      */
-    fastQDA();
+    fastQDA(void);
     /**
      * @brief std. dtor
      */
-    ~fastQDA() {}
+    ~fastQDA(void) {}
 
 public slots:
     /**
@@ -67,6 +81,8 @@ public slots:
         QMessageBox::about(this, "fastQDA", "fastQDA is a fast and simple alternative to MaxQDA.\n\n\t(C) by Michael Riedel, 2014");
         //myDialog->exec();
     }
+    void                    setCodeinSelection(QTreeWidgetItem* currentItem);
+    void                    saveProject(void);
 };
 
 #endif // FASTQDA_H
