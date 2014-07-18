@@ -1,26 +1,26 @@
 # fastQDA - a fast and simple alternative for quality-data-analysis 
 
 <p >
-  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/overview.png" alt="fastQDA - Overview"/>
+  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/overview.PNG" alt="fastQDA - Overview"/>
 </p>
 
 ## What is fastQDA?
 The aim of this project is to create an open-source alternative to the market leader MaxQDA. Written in C++ and Qt it is possible to use fastQDA on almost every plattform from mobile to desktop.
 
 <p >
-  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/main_window.png" alt="Mainwindow"/>
+  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/main_window.PNG" alt="Mainwindow"/>
 </p>
 
 FastQDA is a 3-pane window which enables the user to interact freely with his code- and document-database and his active document in the center of the application. Each code can be colorized and represents the markercolor for the documents.
 
 <p >
-  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/code_settings.png" alt="code-settings-dialog"/>
+  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/code_settings.PNG" alt="code-settings-dialog"/>
 </p>
 
 Each code consits of a name, a definition, an example (called the anchor), its representing color and its headcode. The code is identified with its unique name. Each settings is adjustable via the 'settings-dialog'.
 
 <p >
-  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/code_color_settings.png" alt="color-dialog"/>
+  <img align="center" src="https://raw.github.com/gismo141/fastQDA/master/documentation/code_color_settings.PNG" alt="color-dialog"/>
 </p>
 
 With the usage of Qt it is possible to create an user-experience that matches the operating-systems style. It is not needed to have a special design for every plattform because everything is already provided by the Qt-framework.
