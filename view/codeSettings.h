@@ -14,27 +14,29 @@
 class codeSettings : public QDialog {
     Q_OBJECT
 private:
-    QWidget *thisParent;
-	QLabel *l_name;
-	QLabel *l_definition;
-	QLabel *l_anker;
-	QLabel *l_headcode;
-	QPlainTextEdit *m_name;
-    QPlainTextEdit *m_definition;
-    QPlainTextEdit *m_anker;
-    QColor m_color;
-    QComboBox *m_headcode;
-	QPushButton *addCode;
-    QPushButton *cancel;
-    QPushButton *changeColor;
-    void setHeight(QPlainTextEdit* edit, int nRows);
+    QWidget 		*thisParent;
+	QLabel 			*l_name;
+	QLabel 			*l_definition;
+	QLabel 			*l_anker;
+	QLabel 			*l_headcode;
+	QPlainTextEdit	*m_name;
+    QPlainTextEdit	*m_definition;
+    QPlainTextEdit	*m_anker;
+    QColor 			m_color;
+    QComboBox 		*m_headcode;
+	QPushButton 	*b_save;
+	QPushButton 	*b_cancel;
+    QPushButton 	*b_remove;
+    QPushButton 	*b_changeColor;
+    void			setHeight(QPlainTextEdit* edit, int nRows);
+    void 			updateCodeList(void);
 public:
 	codeSettings(QWidget *parent = 0);
 public slots:
-	void setCodeColor(void);
-	void addNewCode(void);
-	void changeParameters(QTreeWidgetItem*, int);
-	void updateSettings(void);
+	void 			setCodeColor(void);
+	void 			saveCode(void);
+	void 			removeCode(void);
+	void 			changeParameters(QTreeWidgetItem*, int);
 };
 
 #endif // CODE_SETTINGS_H

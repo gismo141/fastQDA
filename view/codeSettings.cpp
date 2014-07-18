@@ -31,11 +31,13 @@ codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
     setHeight(m_anker, 3);
     m_headcode = new QComboBox(this);
     m_headcode->setEditable(false);
+    updateCodeList();
 
     // set-up all buttons
-    cancel = new QPushButton("Cancel", this);
-    changeColor = new QPushButton("Change Color", this);
-    addCode = new QPushButton("Save", this);
+    b_cancel = new QPushButton("Cancel", this);
+    b_remove = new QPushButton("Remove", this);
+    b_changeColor = new QPushButton("Change Color", this);
+    b_save = new QPushButton("Save", this);
 
     // Horizontal layouts
     QHBoxLayout *name = new QHBoxLayout();
@@ -51,14 +53,16 @@ codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
     headcode->addWidget(l_headcode);
     headcode->addWidget(m_headcode);
 	QHBoxLayout *buttons = new QHBoxLayout();
-	buttons->addWidget(cancel);
-    buttons->addWidget(changeColor);
-    buttons->addWidget(addCode);
+    buttons->addWidget(b_save);
+    buttons->addWidget(b_changeColor);
+    buttons->addWidget(b_remove);
+    buttons->addWidget(b_cancel);
 
     // Signals
-    QObject::connect(changeColor, SIGNAL(clicked()), this, SLOT(setCodeColor()));
-    QObject::connect(addCode, SIGNAL(clicked()), this, SLOT(addNewCode()));
-    QObject::connect(cancel, SIGNAL(clicked()), this, SLOT(close()));
+    QObject::connect(b_changeColor, SIGNAL(clicked()), this, SLOT(setCodeColor()));
+    QObject::connect(b_save, SIGNAL(clicked()), this, SLOT(saveCode()));
+    QObject::connect(b_remove, SIGNAL(clicked()), this, SLOT(removeCode()));
+    QObject::connect(b_cancel, SIGNAL(clicked()), this, SLOT(close()));
 
     // create main-layout
     QVBoxLayout* settingsLayout = new QVBoxLayout();
@@ -70,19 +74,48 @@ codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
     QWidget::setLayout(settingsLayout);
 }
 
-void codeSettings::updateSettings(void) {
-	m_headcode->clear();
-	m_headcode->addItem("No Headcode", "No Headcode");
-	for (auto headcode : ((mainWidget *) thisParent)->getCodeList())
-		m_headcode->addItem(headcode, headcode);
-	exec();
-}
+/*
+ *
+ * WIDGET-SETTINGS
+ *
+ */
 
 void codeSettings::setHeight(QPlainTextEdit* edit, int nRows) {
 	QFontMetrics m(edit->font());
 	int rowHeight = m.lineSpacing();
 	edit -> setFixedHeight(nRows * rowHeight);
 }
+
+void codeSettings::updateCodeList(void) {
+    m_headcode->clear();
+    m_headcode->addItem("No Headcode", "No Headcode");
+    std::vector<QString> codelist = ((mainWidget *) thisParent)->getCodeList();
+    for (auto &code : codelist)
+        m_headcode->addItem(code, code);
+}
+
+void codeSettings::changeParameters(QTreeWidgetItem* oldCodeItem, int column) {
+    code *newCode = ((mainWidget *) thisParent)->getCode(oldCodeItem);
+
+    m_name->setPlainText(newCode->getName());
+    m_definition->setPlainText(newCode->getDefinition());
+    m_anker->setPlainText(newCode->getAnker());
+    if(newCode->getHeadcode())
+        m_headcode->setCurrentIndex(m_headcode->findData(newCode->getHeadcode()->getName()));
+    else
+        m_headcode->setCurrentIndex(m_headcode->findData("No Headcode"));
+
+    m_color = newCode->getColor();
+    l_name->setPalette(QPalette(m_color));
+    l_name->setAutoFillBackground(true);
+    exec();
+}
+
+/*
+ *
+ * CODE-MANIPULATION
+ *
+ */
 
 void codeSettings::setCodeColor(void) {
 	QColor color = QColorDialog::getColor(Qt::green, this);
@@ -94,28 +127,16 @@ void codeSettings::setCodeColor(void) {
     }
 }
 
-void codeSettings::addNewCode(void) {
-	((mainWidget *) thisParent)->addNewCode(m_name->toPlainText()
+void codeSettings::saveCode(void) {
+	((mainWidget *) thisParent)->addCode(m_name->toPlainText()
 											, m_definition->toPlainText()
 											, m_anker->toPlainText()
 											, m_color
 											, m_headcode->currentText());
-	m_headcode->addItem(m_name->toPlainText(), m_name->toPlainText());
+    updateCodeList();
 }
 
-void codeSettings::changeParameters(QTreeWidgetItem* oldCodeItem, int column) {
-	code *newCode = ((mainWidget *) thisParent)->getCode(oldCodeItem);
-
-	m_name->setPlainText(newCode->getName());
-	m_definition->setPlainText(newCode->getDefinition());
-	m_anker->setPlainText(newCode->getAnker());
-	if(newCode->getHeadcode())
-		m_headcode->setCurrentIndex(m_headcode->findData(newCode->getHeadcode()->getName()));
-	else
-		m_headcode->setCurrentIndex(m_headcode->findData("No Headcode"));
-
-    m_color = newCode->getColor();
- 	l_name->setPalette(QPalette(m_color));
- 	l_name->setAutoFillBackground(true);
-	exec();
+void codeSettings::removeCode(void) {
+    ((mainWidget *) thisParent)->removeCode(m_name->toPlainText());
+    close();
 }

@@ -64,9 +64,8 @@ public slots:
      * @details At the moment there is only a `about`-box implemented.
      */
     void messageBox(void) {
-        QMessageBox* myDialog = new QMessageBox(QMessageBox::Information,
-        "fastQDA", "fastQDA\n a fast and simple alternative to MaxQDA", QMessageBox::Ok);
-        myDialog->exec();
+        QMessageBox::about(this, "fastQDA", "fastQDA is a fast and simple alternative to MaxQDA.\n\n\t(C) by Michael Riedel, 2014");
+        //myDialog->exec();
     }
 };
 

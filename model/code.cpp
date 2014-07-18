@@ -1,15 +1,15 @@
 #include <code.h>
 
 code::code(const QString &name, const QString &definition, const QString &anker, QColor color, code *headcode) {
-	this->m_name = name;
-	this->m_definition = definition;
-	this->m_anker = anker;
-	this->m_color = color;
-	this->m_headcode = headcode;
+	m_name = name;
+	m_definition = definition;
+	m_anker = anker;
+	m_color = color;
+	m_headcode = headcode;
 };
 
 void code::setName(const QString &name) {
-	this->m_name = name;
+	m_name = name;
 }
 
 QString code::getName(void) {
@@ -17,7 +17,7 @@ QString code::getName(void) {
 }
 
 void code::setDefinition(const QString &definition) {
-	this->m_definition = definition;
+	m_definition = definition;
 }
 
 QString code::getDefinition(void) {
@@ -25,7 +25,7 @@ QString code::getDefinition(void) {
 }
 
 void code::setAnker(const QString &anker) {
-	this->m_anker = anker;
+	m_anker = anker;
 }
 
 QString code::getAnker(void) {
@@ -33,7 +33,7 @@ QString code::getAnker(void) {
 }
 
 void code::setColor(QColor color) {
-	this->m_color = color;
+	m_color = color;
 }
 
 QColor code::getColor(void) {
@@ -41,7 +41,7 @@ QColor code::getColor(void) {
 }
 
 void code::setHeadcode(code *headcode) {
-	this->m_headcode = headcode;
+	m_headcode = headcode;
 }
 
 code *code::getHeadcode(void) {

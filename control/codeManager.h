@@ -13,10 +13,14 @@ protected:
 public:
 	codeManager();
 public slots:
-	code* addNewCode(const QString &name, const QString &definition, const QString &anker, QColor color, const QString &headcode);
-	void removeCode(const QString &name);
+	code 				*addCode(const QString &name
+								, const QString &definition
+								, const QString &anker
+								, QColor color
+								, const QString &headcode);
+	void 				removeCode(code *codeToRemove);
 	std::vector<code *> getCodes(void);
-	code *getCode(const QString &name);
+	code 				*getCode(const QString &name);
 };
 
 #endif // CODE_MANAGER_H

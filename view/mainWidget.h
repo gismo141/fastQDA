@@ -23,16 +23,15 @@ class mainWidget : public QWidget {
     Q_OBJECT
 private:
     // Code-Manager
-    codeManager *myCodeManager;
+    codeManager             *myCodeManager;
     // Coding-Window
-    QLabel *activeDocumentLabel;
-    QTextEdit *activeDocument;
+    QLabel                  *activeDocumentLabel;
+    QTextEdit               *activeDocument;
     // Codelist-Area
-    QTreeWidget *codeList;
-    QLabel *colorLabel;
-    QPushButton *addCode;
-    QPushButton *setCode;
-    QPushButton *removeCode;
+    QTreeWidget             *codeList;
+    QLabel                  *colorLabel;
+    QPushButton             *add;
+    QPushButton             *setCode;
 public:
     /**
      * @brief std. ctor
@@ -42,19 +41,20 @@ public:
      * @brief std. dtor
      */
     ~mainWidget() {}
-    QTreeWidgetItem *addCodeToList(code *code);
-    QTreeWidgetItem *findCodeInList(const QString &name);
-    std::vector<QString> getCodeList(void);
+    QTreeWidgetItem         *addCodeToList(code *code);
+    QTreeWidgetItem         *findCodeInList(const QString &name);
+    std::vector<QString>    getCodeList(void);
 public slots:
     /**
      * @brief This function is used to update the coding-window.
      * @details [long description]
      */
-    void updateActiveDocument(const QString& name);
-    void setCodeinSelection(void);
-    void addNewCode(const QString &name, const QString &definition, const QString &anker, QColor color, const QString &headcode);
-    void removeThisCode(void);
-    code *getCode(QTreeWidgetItem* code);
+    void                    updateActiveDocument(const QString& name);
+    void                    setCodeinSelection(void);
+    void                    addCode(const QString &name, const QString &definition, const QString &anker, QColor color, const QString &headcode);
+    code                    *getCode(QTreeWidgetItem* code);
+    void                    updateCodeTree(void);
+    void                    removeCode(const QString &codeToRemove);
 };
 
 #endif // MAIN_WIDGET_H

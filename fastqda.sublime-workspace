@@ -127,9 +127,17 @@
 	"build_system": "Packages/User/cupp.sublime-package/qt.sublime-build",
 	"command_palette":
 	{
-		"height": 313.0,
+		"height": 71.0,
 		"selected_items":
 		[
+			[
+				"Build: cl",
+				"Build: Clean"
+			],
+			[
+				"Build: ",
+				"Build: Init"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -216,10 +224,14 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/michaelriedel/Developer/fastQDA"
+		"/Users/michaelriedel/Developer/fastQDA",
+		"/Users/michaelriedel/Developer/fastQDA/control",
+		"/Users/michaelriedel/Developer/fastQDA/model",
+		"/Users/michaelriedel/Developer/fastQDA/view"
 	],
 	"file_history":
 	[
+		"/Users/michaelriedel/Developer/fastQDA/view/fastqda.cpp",
 		"/Users/michaelriedel/Documents/test/blubb/mainWindow.h",
 		"/Users/michaelriedel/Documents/test/blubb/blubb.cpp",
 		"/Users/michaelriedel/Developer/easyCoding/model/codeManager.h",
