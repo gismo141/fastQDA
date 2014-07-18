@@ -1,9 +1,9 @@
 #include <code.h>
 
-code::code(const QString &name, const QString &definition, const QString &anker, QColor color, code *headcode) {
+code::code(const QString &name, const QString &definition, const QString &anchor, QColor color, code *headcode) {
 	m_name = name;
 	m_definition = definition;
-	m_anker = anker;
+	m_anchor = anchor;
 	m_color = color;
 	m_headcode = headcode;
 };
@@ -24,12 +24,12 @@ QString code::getDefinition(void) {
 	return m_definition;
 }
 
-void code::setAnker(const QString &anker) {
-	m_anker = anker;
+void code::setAnchor(const QString &anchor) {
+	m_anchor = anchor;
 }
 
-QString code::getAnker(void) {
-	return m_anker;
+QString code::getAnchor(void) {
+	return m_anchor;
 }
 
 void code::setColor(QColor color) {

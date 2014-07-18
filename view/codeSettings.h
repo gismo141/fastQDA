@@ -16,11 +16,11 @@ private:
     QWidget 		*thisParent;
 	QLabel 			*l_name;
 	QLabel 			*l_definition;
-	QLabel 			*l_anker;
+	QLabel 			*l_anchor;
 	QLabel 			*l_headcode;
 	QPlainTextEdit	*m_name;
     QPlainTextEdit	*m_definition;
-    QPlainTextEdit	*m_anker;
+    QPlainTextEdit	*m_anchor;
     QColor 			m_color;
     QComboBox 		*m_headcode;
 	QPushButton 	*b_save;
