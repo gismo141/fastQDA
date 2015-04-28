@@ -25,23 +25,68 @@ Each code consits of a name, a definition, an example (called the anchor), its r
 
 With the usage of Qt it is possible to create an user-experience that matches the operating-systems style. It is not needed to have a special design for every plattform because everything is already provided by the Qt-framework.
 
-## Usage notes:
+## Usage notes
+
 At the time of writing the developement is made under Mac OS X with Sublime Text 3 and QtCreator for debugging-purpose. The backend for text-coding is made with the xpdf-toolchain which is freely available.
 
-## Dependencies:
+## Installation
 
-Up to now you need to have at least following programs installed:
+To build fastQDA you need:
 
-- `xpdf`
+- `homebrew` (package manager for Mac OS X)
+- `CMake` (build-system generator)
+- `Qt5` (ui-libraries)
+- `Poppler` (pdf-handling)
+
+### Download the repository
+
+```bash
+git clone git@github.com:gismo141/fastQDA
+cd fastQDA
+```
+
+### [Install `homebrew`](http://brew.sh)
+
+### Install `CMake`
+
+```bash
+brew install cmake
+```
+
+### Install `Qt5`
+
+```bash
+brew install qt5
+```
+
+Because `Qt4` is still used in many other projects, `brew` does not link the `Qt5` binaries automatically. You can do this manually by adding the path to your `.bash_profile`:
+
+```bash
+export PATH=/usr/local/opt/qt5/bin:$PATH
+```
+
+### Install `Poppler`
+
+```bash
+brew install poppler.rb --with-qt5
+```
+
+### Compile `fastQDA`
+
+```bash
+mkdir build # create the build-folder (holds the binaries)
+cd build    # enter the build-folder
+cmake ..    # prepare the build system
+make        # compile the prepared files
+```
+
+If everything worked, you will now have the binary in your `build`-folder.
 
 ## How could you contribute?
-1. [Fork this project][fork] to your account.
-2. [Create a new branch][branch] for the improvements, you intend to make.
+
+1. [Fork this project][http://help.github.com/forking/] to your account.
+2. [Create a new branch][https://help.github.com/articles/creating-and-deleting-branches-within-your-repository] for the improvements, you intend to make.
 3. **Make the changements in your fork.**
-4. [Send a pull-request][pr] from your fork’s branch to my `master` branch.
+4. [Send a pull-request][http://help.github.com/pull-requests/] from your fork’s branch to my `master` branch.
  
 You can always use the web-interface to make the changes you want. It helps you automizing the workflow from above.
-
-[fork]: http://help.github.com/forking/
-[branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-[pr]: http://help.github.com/pull-requests/

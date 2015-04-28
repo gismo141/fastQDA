@@ -11,9 +11,9 @@
 #include <QString>
 #include <QTreeWidgetItem>
 
-#include "documentList.h"
-#include "mainWidget.h"
-#include "codeList.h"
+#include "view/documentList.h"
+#include "view/mainWidget.h"
+#include "view/codeList.h"
 
 /**
  * @brief This class represents the main-window and its menubar.
@@ -21,27 +21,27 @@
  */
 class fastQDA : public QMainWindow {
     Q_OBJECT
-private:
+  private:
     /**
      * @brief This function creates the menubar and its entries.
-     * @details All global functions of the program should be accessable from here. 
+     * @details All global functions of the program should be accessable from here.
      */
-    QMenu                   *setupFileMenu(void);
-    QMenu                   *setupEditMenu(void);
-    QMenu                   *setupViewMenu(void);
-    QMenu                   *setupHelpMenu(void);
+    QMenu*                   setupFileMenu(void);
+    QMenu*                   setupEditMenu(void);
+    QMenu*                   setupViewMenu(void);
+    QMenu*                   setupHelpMenu(void);
 
     void                    setupDocumentBrowser(void);
     void                    setupMainWidget(void);
     void                    setupCodeBrowser(void);
-protected:
-    QMenuBar                *myMenu;
-    QFileDialog             *myFileDialog;
-    QFileDialog             *myProjectDialog;
-    mainWidget              *myMainWidget;
-    QDockWidget             *documentBrowser;
-    QDockWidget             *codeBrowser;
-public:
+  protected:
+    QMenuBar*                myMenu;
+    QFileDialog*             myFileDialog;
+    QFileDialog*             myProjectDialog;
+    mainWidget*              myMainWidget;
+    QDockWidget*             documentBrowser;
+    QDockWidget*             codeBrowser;
+  public:
     /**
      * @brief std. ctor
      */
@@ -51,11 +51,11 @@ public:
      */
     ~fastQDA(void) {}
 
-public slots:
+  public slots:
     /**
      * @brief This function imports a file into the local database.
      * @details If the selected file is a *.pdf its text is extracted with `pdftotext`, after that the file is saved in the local database and its content will be sent to the mainWidget's coding-pane.
-     * 
+     *
      * @param name The pointer to the selected file to import.
      */
     void importFile(const QString& name);

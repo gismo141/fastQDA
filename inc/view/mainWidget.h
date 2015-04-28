@@ -4,26 +4,26 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-#include <QTextEdit>
+#include <QImage>
 #include <QLabel>
 #include <QTreeWidgetItem>
 
 class mainWidget : public QWidget {
     Q_OBJECT
-private:
-    QVBoxLayout *documentArea;
-    QLabel      *activeDocumentLabel;
-    QTextEdit   *activeDocument;
-public:
+  private:
+    QVBoxLayout*    documentArea;
+    QLabel*         activeDocumentLabel;
+    QLabel*         activeDocument;
+  public:
     /**
      * @brief std. ctor
      */
-    mainWidget(QWidget *parent = 0);
+    explicit mainWidget(QWidget* parent = 0);
     /**
      * @brief std. dtor
      */
     ~mainWidget() {}
-public slots:
+  public slots:
     /**
      * @brief This function is used to update the coding-window.
      * @details [long description]

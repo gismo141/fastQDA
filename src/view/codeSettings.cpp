@@ -3,26 +3,26 @@
 #include <QColorDialog>
 #include <QFontMetrics>
 
-#include "codeSettings.h"
-#include "codeList.h"
+#include "view/codeSettings.h"
+#include "view/codeList.h"
 
-codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
-	thisParent = parent;
+codeSettings::codeSettings(QWidget* parent) : QDialog(parent) {
+    thisParent = parent;
     // set-up all labels
     int fixedWidth = 100;
     l_name = new QLabel("Code:", this);
     l_name->setFixedWidth(fixedWidth);
-	l_definition = new QLabel("Definition:", this);
-	l_definition->setFixedWidth(fixedWidth);
-	l_anchor = new QLabel("Anchor:", this);
-	l_anchor->setFixedWidth(fixedWidth);
-	l_headcode = new QLabel("Headcode:", this);
-	l_headcode->setFixedWidth(fixedWidth);
+    l_definition = new QLabel("Definition:", this);
+    l_definition->setFixedWidth(fixedWidth);
+    l_anchor = new QLabel("Anchor:", this);
+    l_anchor->setFixedWidth(fixedWidth);
+    l_headcode = new QLabel("Headcode:", this);
+    l_headcode->setFixedWidth(fixedWidth);
 
-	// set-up all input-areas
-	m_name = new QPlainTextEdit(this);
+    // set-up all input-areas
+    m_name = new QPlainTextEdit(this);
     m_name->setPlainText("The name of the code");
-	setHeight(m_name, 2);
+    setHeight(m_name, 2);
     m_definition = new QPlainTextEdit(this);
     m_definition->setPlainText("The definition of that code");
     setHeight(m_definition, 3);
@@ -40,19 +40,19 @@ codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
     b_save = new QPushButton("Save", this);
 
     // Horizontal layouts
-    QHBoxLayout *name = new QHBoxLayout();
+    QHBoxLayout* name = new QHBoxLayout();
     name->addWidget(l_name);
     name->addWidget(m_name);
-    QHBoxLayout *definition = new QHBoxLayout();
+    QHBoxLayout* definition = new QHBoxLayout();
     definition->addWidget(l_definition);
     definition->addWidget(m_definition);
-    QHBoxLayout *anker = new QHBoxLayout();
+    QHBoxLayout* anker = new QHBoxLayout();
     anker->addWidget(l_anchor);
     anker->addWidget(m_anchor);
-    QHBoxLayout *headcode = new QHBoxLayout();
+    QHBoxLayout* headcode = new QHBoxLayout();
     headcode->addWidget(l_headcode);
     headcode->addWidget(m_headcode);
-	QHBoxLayout *buttons = new QHBoxLayout();
+    QHBoxLayout* buttons = new QHBoxLayout();
     buttons->addWidget(b_save);
     buttons->addWidget(b_changeColor);
     buttons->addWidget(b_remove);
@@ -81,29 +81,34 @@ codeSettings::codeSettings(QWidget *parent) : QDialog(parent) {
  */
 
 void codeSettings::setHeight(QPlainTextEdit* edit, int nRows) {
-	QFontMetrics m(edit->font());
-	int rowHeight = m.lineSpacing();
-	edit -> setFixedHeight(nRows * rowHeight);
+    QFontMetrics m(edit->font());
+    int rowHeight = m.lineSpacing();
+    edit -> setFixedHeight(nRows * rowHeight);
 }
 
 void codeSettings::updateCodeList(void) {
     m_headcode->clear();
     m_headcode->addItem("No Headcode", "No Headcode");
-    std::vector<QString> codelist = ((codeList *) thisParent)->getCodeList();
-    for (auto &code : codelist)
+    std::vector<QString> codelist = ((codeList*) thisParent)->getCodeList();
+
+    for (auto& code : codelist) {
         m_headcode->addItem(code, code);
+    }
 }
 
 void codeSettings::changeParameters(QTreeWidgetItem* oldCodeItem, int column) {
-    code *newCode = ((codeList *) thisParent)->getCode(oldCodeItem);
+    code* newCode = ((codeList*) thisParent)->getCode(oldCodeItem);
 
     m_name->setPlainText(newCode->getName());
     m_definition->setPlainText(newCode->getDefinition());
     m_anchor->setPlainText(newCode->getAnchor());
-    if(newCode->getHeadcode())
+
+    if (newCode->getHeadcode()) {
         m_headcode->setCurrentIndex(m_headcode->findData(newCode->getHeadcode()->getName()));
-    else
+
+    } else {
         m_headcode->setCurrentIndex(m_headcode->findData("No Headcode"));
+    }
 
     m_color = newCode->getColor();
     l_name->setPalette(QPalette(m_color));
@@ -118,25 +123,25 @@ void codeSettings::changeParameters(QTreeWidgetItem* oldCodeItem, int column) {
  */
 
 void codeSettings::setCodeColor(void) {
-	QColor color = QColorDialog::getColor(Qt::green, this);
-    if (color.isValid())
-    {
-   		m_color = color;
+    QColor color = QColorDialog::getColor(Qt::green, this);
+
+    if (color.isValid()) {
+        m_color = color;
         l_name->setPalette(QPalette(color));
         l_name->setAutoFillBackground(true);
     }
 }
 
 void codeSettings::saveCode(void) {
-	((codeList *) thisParent)->addCode(m_name->toPlainText()
-											, m_definition->toPlainText()
-											, m_anchor->toPlainText()
-											, m_color
-											, m_headcode->currentText());
+    ((codeList*) thisParent)->addCode(m_name->toPlainText()
+                                      , m_definition->toPlainText()
+                                      , m_anchor->toPlainText()
+                                      , m_color
+                                      , m_headcode->currentText());
     updateCodeList();
 }
 
 void codeSettings::removeCode(void) {
-    ((codeList *) thisParent)->removeCode(m_name->toPlainText());
+    ((codeList*) thisParent)->removeCode(m_name->toPlainText());
     close();
 }

@@ -1,9 +1,9 @@
-#include "documentList.h"
+#include "view/documentList.h"
 
-documentList::documentList(QMainWindow *parent) {
-	thisParent = parent;
+documentList::documentList(QMainWindow* parent) {
+    thisParent = parent;
 
-	// create document-browser
+    // create document-browser
     documentTree = new QTreeWidget(thisParent);
     documentTree->setColumnCount(2);
     QStringList documentHeaders;

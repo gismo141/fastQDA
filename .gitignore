@@ -1,3 +1,2 @@
-# Ignore intermediate files
-moc_*
-*.o
+# Ignore binary-folder
+build/

@@ -3,7 +3,7 @@
 #include <QStringList>
 #include <QHeaderView>
 
-#include "fastQDA.h"
+#include "view/fastQDA.h"
 
 fastQDA::fastQDA() : QMainWindow(NULL) {
     setWindowTitle("New Project - fastQDA");
@@ -18,7 +18,7 @@ fastQDA::fastQDA() : QMainWindow(NULL) {
     setupDocumentBrowser();
     myMainWidget = new mainWidget(this);
     setupCodeBrowser();
-    
+
     this->setCentralWidget(myMainWidget);
 };
 
@@ -28,15 +28,15 @@ fastQDA::fastQDA() : QMainWindow(NULL) {
  *
  */
 
-QMenu *fastQDA::setupFileMenu(void) {
+QMenu* fastQDA::setupFileMenu(void) {
     // Install Project Dialog
     myProjectDialog = new QFileDialog(this);
     myProjectDialog->setNameFilter("Project (*.db *.txt *fastqda-project)");
     // Install File Dialog
     myFileDialog = new QFileDialog(this);
     myFileDialog->setNameFilter("Documents (*.pdf *.txt *html)");
-    
-    QMenu *myFileMenu  = new QMenu("File", this);
+
+    QMenu* myFileMenu  = new QMenu("File", this);
 
     myFileMenu->addAction("Open Project", myProjectDialog, SLOT(exec()), Qt::CTRL + Qt::Key_O);
     myFileMenu->addAction("Import File", myFileDialog, SLOT(exec()), Qt::CTRL + Qt::Key_I);
@@ -46,26 +46,26 @@ QMenu *fastQDA::setupFileMenu(void) {
 
     /* Connect Signals */
     connect (myFileDialog, SIGNAL(fileSelected(const QString&)), this, SLOT(importFile(const QString&)));
-    
+
     return myFileMenu;
 }
 
-QMenu *fastQDA::setupEditMenu(void) {
-    QMenu *myEditMenu  = new QMenu("Edit", this);
+QMenu* fastQDA::setupEditMenu(void) {
+    QMenu* myEditMenu  = new QMenu("Edit", this);
     myEditMenu->addAction("Undo", this, SLOT(showFullScreen()), Qt::CTRL + Qt::Key_Z);
     myEditMenu->addAction("Repeat", this, SLOT(showNormal()), Qt::CTRL + Qt::Key_Y);
     return myEditMenu;
 }
 
-QMenu *fastQDA::setupViewMenu(void) {
-    QMenu *myViewMenu  = new QMenu("View", this);
+QMenu* fastQDA::setupViewMenu(void) {
+    QMenu* myViewMenu  = new QMenu("View", this);
     myViewMenu->addAction("Fullscreen", this, SLOT(showFullScreen()), Qt::CTRL + Qt::Key_F);
     myViewMenu->addAction("Windowed", this, SLOT(showNormal()), Qt::CTRL + Qt::Key_N);
     return myViewMenu;
 }
 
-QMenu *fastQDA::setupHelpMenu(void) {
-    QMenu *myHelpMenu  = new QMenu("Help", this);
+QMenu* fastQDA::setupHelpMenu(void) {
+    QMenu* myHelpMenu  = new QMenu("Help", this);
     myHelpMenu->addAction("About...", this, SLOT(messageBox()), Qt::CTRL + Qt::Key_H);
     return myHelpMenu;
 }
@@ -81,7 +81,7 @@ void fastQDA::setupDocumentBrowser(void) {
     documentBrowser->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     addDockWidget(Qt::LeftDockWidgetArea, documentBrowser);
 
-    documentList *docs = new documentList(this);
+    documentList* docs = new documentList(this);
     documentBrowser->setWidget(docs);
 }
 
@@ -100,7 +100,7 @@ void fastQDA::setupCodeBrowser(void) {
     codeBrowser->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     addDockWidget(Qt::RightDockWidgetArea, codeBrowser);
 
-    codeList *codes = new codeList(this);
+    codeList* codes = new codeList(this);
     codeBrowser->setWidget(codes);
 }
 
@@ -114,6 +114,6 @@ void fastQDA::setCodeinSelection(QTreeWidgetItem* currentItem) {
  *
  */
 
- void fastQDA::saveProject(void) {
+void fastQDA::saveProject(void) {
 
- }
+}
