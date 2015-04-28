@@ -36,7 +36,7 @@ To build fastQDA you need:
 - `homebrew` (package manager for Mac OS X)
 - `CMake` (build-system generator)
 - `Qt5` (ui-libraries)
-- `Poppler` (pdf-handling)
+- [`Poppler` (pdf-rendering-library)](http://poppler.freedesktop.org)
 
 ### Download the repository
 
@@ -84,9 +84,9 @@ If everything worked, you will now have the binary in your `build`-folder.
 
 ## How could you contribute?
 
-1. [Fork this project][http://help.github.com/forking/] to your account.
-2. [Create a new branch][https://help.github.com/articles/creating-and-deleting-branches-within-your-repository] for the improvements, you intend to make.
+1. [Fork this project](http://help.github.com/forking/) to your account.
+2. [Create a new branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository) for the improvements, you intend to make.
 3. **Make the changements in your fork.**
-4. [Send a pull-request][http://help.github.com/pull-requests/] from your fork’s branch to my `master` branch.
+4. [Send a pull-request](http://help.github.com/pull-requests/) from your fork’s branch to my `master` branch.
  
 You can always use the web-interface to make the changes you want. It helps you automizing the workflow from above.
