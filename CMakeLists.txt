@@ -39,6 +39,7 @@ set(_MOC_HDRS					# moc all headers
 	inc/view/codeSettings.h
 	inc/view/documentList.h
 	inc/view/mainWidget.h
+	inc/view/documentwidget.h
 	inc/view/fastqda.h)
 
 qt5_wrap_cpp(_MOC_SRCS ${_MOC_HDRS})
@@ -47,7 +48,7 @@ if(APPLE)
 	add_executable(
 		${PROGNAME} MACOSX_BUNDLE main.cpp ${_SRCS} ${_MOC_SRCS}
 	)
-    add_custom_command(TARGET ${PROGNAME} POST_BUILD
+    add_custom_command(TARGET fastQDA POST_BUILD
     	command mkdir ARGS -p
     	${CMAKE_CURRENT_BINARY_DIR}/${PROGNAME}.app/Contents/Resources
     	command cp ARGS

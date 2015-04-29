@@ -38,22 +38,22 @@ To build fastQDA you need:
 - `Qt5` (ui-libraries)
 - [`Poppler` (pdf-rendering-library)](http://poppler.freedesktop.org)
 
-### Download the repository
+### 1. Download the repository
 
 ```bash
 git clone git@github.com:gismo141/fastQDA
 cd fastQDA
 ```
 
-### [Install `homebrew`](http://brew.sh)
+### 2. [Install `homebrew`](http://brew.sh)
 
-### Install `CMake`
+### 3. Install `CMake`
 
 ```bash
 brew install cmake
 ```
 
-### Install `Qt5`
+### 4. Install `Qt5`
 
 ```bash
 brew install qt5
@@ -65,13 +65,13 @@ Because `Qt4` is still used in many other projects, `brew` does not link the `Qt
 export PATH=/usr/local/opt/qt5/bin:$PATH
 ```
 
-### Install `Poppler`
+### 5. Install `Poppler`
 
 ```bash
 brew install poppler.rb --with-qt5
 ```
 
-### Compile `fastQDA`
+### 6. Compile `fastQDA`
 
 ```bash
 mkdir build # create the build-folder (holds the binaries)

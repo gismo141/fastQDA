@@ -124,26 +124,47 @@
 	"buffers":
 	[
 	],
-	"build_system": "Packages/User/cupp.sublime-package/qt.sublime-build",
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 71.0,
+		"height": 131.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Build: ",
+				"Build With: Make - Clean"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
 			[
 				"Build: cl",
 				"Build: Clean"
 			],
 			[
-				"Build: ",
-				"Build: Init"
-			],
-			[
 				"inst",
-				"Package Control: Install Package"
-			],
-			[
-				"ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -203,7 +224,7 @@
 				"Package Control: Upgrade Package"
 			]
 		],
-		"width": 435.0
+		"width": 610.0
 	},
 	"console":
 	{
@@ -225,12 +246,33 @@
 	"expanded_folders":
 	[
 		"/Users/michaelriedel/Developer/fastQDA",
-		"/Users/michaelriedel/Developer/fastQDA/control",
-		"/Users/michaelriedel/Developer/fastQDA/model",
-		"/Users/michaelriedel/Developer/fastQDA/view"
+		"/Users/michaelriedel/Developer/fastQDA/build",
+		"/Users/michaelriedel/Developer/fastQDA/inc",
+		"/Users/michaelriedel/Developer/fastQDA/inc/view",
+		"/Users/michaelriedel/Developer/fastQDA/src",
+		"/Users/michaelriedel/Developer/fastQDA/src/view"
 	],
 	"file_history":
 	[
+		"/Users/michaelriedel/Developer/fastQDA/fastqda.sublime-project",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/michaelriedel/Developer/fastQDA/main.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/src/view/codeSettings.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/src/view/codeList.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/codeList.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/inc/view/mainWidget.h",
+		"/Users/michaelriedel/Developer/fastQDA/inc/view/fastqda.h",
+		"/Users/michaelriedel/Developer/fastQDA/src/view/fastqda.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/inc/view/documentList.h",
+		"/Users/michaelriedel/Developer/fastQDA/src/view/documentList.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/inc/view/codeSettings.h",
+		"/Users/michaelriedel/Developer/fastQDA/inc/view/codeList.h",
+		"/Users/michaelriedel/Developer/fastQDA/inc/model/code.h",
+		"/Users/michaelriedel/Developer/fastQDA/src/model/code.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/src/control/codeManager.cpp",
+		"/Users/michaelriedel/Developer/fastQDA/inc/control/codeManager.h",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/C++.sublime-settings",
 		"/Users/michaelriedel/Developer/fastQDA/view/fastqda.cpp",
 		"/Users/michaelriedel/Documents/test/blubb/mainWindow.h",
 		"/Users/michaelriedel/Documents/test/blubb/blubb.cpp",
@@ -290,7 +332,6 @@
 		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/michaelriedel/README.md",
 		"/Users/michaelriedel/Documents/test.md",
-		"/Users/michaelriedel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/michaelriedel/Dropbox/Apps/Texpad/Studienarbeit/Setup/usepackage.tex",
 		"/Users/michaelriedel/Dropbox/Apps/Texpad/Studienarbeit/usepackage.tex",
 		"/Users/michaelriedel/Dropbox/Apps/Texpad/Praktikumsbericht DLR/Anhang/uml_diagramme.mp",
@@ -316,6 +357,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"         ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"	",
+			"                    ",
 			"treeWidget",
 			"TreeWidget",
 			"treeWidget",
@@ -417,6 +466,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
 		"height": 320.0
@@ -429,6 +482,7 @@
 	{
 		"height": 150.0
 	},
+	"pinned_build_system": "Build",
 	"project": "fastqda.sublime-project",
 	"replace":
 	{
@@ -438,6 +492,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -446,6 +501,7 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -454,11 +510,13 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},

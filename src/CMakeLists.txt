@@ -9,6 +9,7 @@ add_library(fastqdaLib
 	./view/codeSettings.cpp
 	./view/documentList.cpp
 	./view/mainWidget.cpp
+	./view/documentwidget.cpp
 	./view/fastqda.cpp)
 
 qt5_use_modules(fastqdaLib Widgets)
